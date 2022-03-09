@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		3FB50DEF27D8EACB00EE07ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */; };
 		3FB50DF127D8EACB00EE07ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */; };
-		3FB50DF327D8EACB00EE07ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DF227D8EACB00EE07ED /* ViewController.swift */; };
+		3FB50DF327D8EACB00EE07ED /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */; };
 		3FB50DF627D8EACB00EE07ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB50DF427D8EACB00EE07ED /* Main.storyboard */; };
 		3FB50DF827D8EACD00EE07ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FB50DF727D8EACD00EE07ED /* Assets.xcassets */; };
 		3FB50DFB27D8EACD00EE07ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FB50DF927D8EACD00EE07ED /* LaunchScreen.storyboard */; };
+		3FB50E0327D8FBF600EE07ED /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50E0227D8FBF600EE07ED /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FB50DEB27D8EACB00EE07ED /* HomeWork 2.3.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork 2.3.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3FB50DF227D8EACB00EE07ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3FB50DF527D8EACB00EE07ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FB50DF727D8EACD00EE07ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB50DFA27D8EACD00EE07ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FB50DFC27D8EACD00EE07ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FB50E0227D8FBF600EE07ED /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */,
 				3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */,
-				3FB50DF227D8EACB00EE07ED /* ViewController.swift */,
+				3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */,
+				3FB50E0227D8FBF600EE07ED /* WelcomeViewController.swift */,
 				3FB50DF427D8EACB00EE07ED /* Main.storyboard */,
 				3FB50DF727D8EACD00EE07ED /* Assets.xcassets */,
 				3FB50DF927D8EACD00EE07ED /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FB50DF327D8EACB00EE07ED /* ViewController.swift in Sources */,
+				3FB50DF327D8EACB00EE07ED /* LogInViewController.swift in Sources */,
+				3FB50E0327D8FBF600EE07ED /* WelcomeViewController.swift in Sources */,
 				3FB50DEF27D8EACB00EE07ED /* AppDelegate.swift in Sources */,
 				3FB50DF127D8EACB00EE07ED /* SceneDelegate.swift in Sources */,
 			);
