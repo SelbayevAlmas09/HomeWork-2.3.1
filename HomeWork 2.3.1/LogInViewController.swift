@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -18,8 +18,27 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userNameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTextField.text
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTextField {
+            passwordTextField.becomeFirstResponder()
+        }
+        else {
+            logInButton.sendActions(for: .touchUpInside)
+        }
+
+        return true
+    }
+
     @IBAction func logInButtonPressed() {
         if userNameTextField.text != "User" || passwordTextField.text != "Password" {
             passwordTextField.text = ""
@@ -28,7 +47,7 @@ class LogInViewController: UIViewController {
                       message: "Please, enter correct login and password")
         }
     }
-    
+
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
         switch sender {
         case forgotUserNameButton:
@@ -38,14 +57,13 @@ class LogInViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTextField.text
-    }
-    
     @IBAction func unwind(for seque: UIStoryboardSegue, sender: Any?) {
         userNameTextField.text = ""
         passwordTextField.text = ""
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     private func showAlert(title: String, message: String) {

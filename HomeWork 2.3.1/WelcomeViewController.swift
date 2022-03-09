@@ -9,22 +9,30 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet var welcomeView: UIView!
     @IBOutlet var welcomeLabel: UILabel!
+    @IBOutlet var emojiLabel: UILabel!
+    
+    @IBOutlet var backNavigationItem: UINavigationItem!
     
     var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        backNavigationItem.hidesBackButton = true
+        
+        welcomeLabel.text = "Welcome, " + userName + "!"
+        emojiLabel.text = "👋🏼"
+        
+        setGradientLayer()
+    }
+    
+    private func setGradientLayer() {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [UIColor.systemPink.cgColor,
-                                UIColor.systemOrange.cgColor]
+                                UIColor.systemCyan.cgColor]
         
         view.layer.insertSublayer(gradientLayer, at: 0)
-        
-        welcomeLabel.text = "Welcome, " + userName + "!"
-        
     }
 }
