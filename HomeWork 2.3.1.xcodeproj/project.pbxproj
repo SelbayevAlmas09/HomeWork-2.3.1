@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F241AB127E0BBF100A6F576 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F241AB027E0BBF100A6F576 /* User.swift */; };
+		3F241AB327E0DFEB00A6F576 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F241AB227E0DFEB00A6F576 /* UserViewController.swift */; };
+		3F241AB527E0EF0D00A6F576 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F241AB427E0EF0D00A6F576 /* Person.swift */; };
+		3F241AB727E100B100A6F576 /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F241AB627E100B100A6F576 /* MoreInfoViewController.swift */; };
 		3FB50DEF27D8EACB00EE07ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */; };
 		3FB50DF127D8EACB00EE07ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */; };
 		3FB50DF327D8EACB00EE07ED /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F241AB027E0BBF100A6F576 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3F241AB227E0DFEB00A6F576 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		3F241AB427E0EF0D00A6F576 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		3F241AB627E100B100A6F576 /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		3FB50DEB27D8EACB00EE07ED /* HomeWork 2.3.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork 2.3.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F241AAB27E0B8FD00A6F576 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */,
+				3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */,
+				3FB50DFC27D8EACD00EE07ED /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3F241AAC27E0B91800A6F576 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */,
+				3FB50E0227D8FBF600EE07ED /* WelcomeViewController.swift */,
+				3F241AB227E0DFEB00A6F576 /* UserViewController.swift */,
+				3F241AB627E100B100A6F576 /* MoreInfoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3F241AAD27E0B98100A6F576 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FB50DF727D8EACD00EE07ED /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3F241AAE27E0B99600A6F576 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3FB50DF427D8EACB00EE07ED /* Main.storyboard */,
+				3FB50DF927D8EACD00EE07ED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3F241AAF27E0B9F000A6F576 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F241AB027E0BBF100A6F576 /* User.swift */,
+				3F241AB427E0EF0D00A6F576 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3FB50DE227D8EACB00EE07ED = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +113,11 @@
 		3FB50DED27D8EACB00EE07ED /* HomeWork 2.3.1 */ = {
 			isa = PBXGroup;
 			children = (
-				3FB50DEE27D8EACB00EE07ED /* AppDelegate.swift */,
-				3FB50DF027D8EACB00EE07ED /* SceneDelegate.swift */,
-				3FB50DF227D8EACB00EE07ED /* LogInViewController.swift */,
-				3FB50E0227D8FBF600EE07ED /* WelcomeViewController.swift */,
-				3FB50DF427D8EACB00EE07ED /* Main.storyboard */,
-				3FB50DF727D8EACD00EE07ED /* Assets.xcassets */,
-				3FB50DF927D8EACD00EE07ED /* LaunchScreen.storyboard */,
-				3FB50DFC27D8EACD00EE07ED /* Info.plist */,
+				3F241AAC27E0B91800A6F576 /* ViewControllers */,
+				3F241AAF27E0B9F000A6F576 /* Models */,
+				3F241AAE27E0B99600A6F576 /* Storyboards */,
+				3F241AAD27E0B98100A6F576 /* Resources */,
+				3F241AAB27E0B8FD00A6F576 /* App */,
 			);
 			path = "HomeWork 2.3.1";
 			sourceTree = "<group>";
@@ -142,8 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB50DF327D8EACB00EE07ED /* LogInViewController.swift in Sources */,
+				3F241AB327E0DFEB00A6F576 /* UserViewController.swift in Sources */,
 				3FB50E0327D8FBF600EE07ED /* WelcomeViewController.swift in Sources */,
 				3FB50DEF27D8EACB00EE07ED /* AppDelegate.swift in Sources */,
+				3F241AB527E0EF0D00A6F576 /* Person.swift in Sources */,
+				3F241AB727E100B100A6F576 /* MoreInfoViewController.swift in Sources */,
+				3F241AB127E0BBF100A6F576 /* User.swift in Sources */,
 				3FB50DF127D8EACB00EE07ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +351,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KD7ZDKV3W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork 2.3.1/Info.plist";
+				INFOPLIST_FILE = "HomeWork 2.3.1/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7KD7ZDKV3W;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "HomeWork 2.3.1/Info.plist";
+				INFOPLIST_FILE = "HomeWork 2.3.1/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
