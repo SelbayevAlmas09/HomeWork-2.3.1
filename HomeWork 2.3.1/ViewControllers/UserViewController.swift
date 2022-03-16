@@ -9,8 +9,7 @@ import UIKit
 
 class UserViewController: UIViewController {
     
-    var userName: String!
-    var user = User()
+    var user: User!
 
     @IBOutlet var fullNameTextField: UITextField!
     @IBOutlet var ageTextField: UITextField!
@@ -19,7 +18,7 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = userName
+        self.navigationItem.title = user.person.fullname
         
         fullNameTextField.text = user.person.fullname
         ageTextField.text = String(user.person.age)

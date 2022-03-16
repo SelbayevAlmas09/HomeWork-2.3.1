@@ -13,7 +13,8 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet var positionTF: UITextField!
     
     @IBOutlet var aboutMeLabel: UILabel!
-    var user = User()
+    
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,7 +14,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordTextField: UITextField!
     
     @IBOutlet var logInButton: UIButton!
-    @IBOutlet var forgotUserNameButton: UIButton!
     
     let user = User()
 
@@ -37,11 +36,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                 welcomeVC.userName = user.person.fullname
             }
             else if let navigationVC = viewController as? UINavigationController {
+                navigationVC.title = user.person.fullname
+                
                 guard let userVC = navigationVC.topViewController as? UserViewController
                 else { return }
             
-                navigationVC.tabBarItem.title = user.person.fullname
-                userVC.userName = user.person.fullname
                 userVC.user = user
                 }
         }
@@ -54,20 +53,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func logInButtonPressed() {
         if userNameTextField.text != user.login || passwordTextField.text != user.password {
-            passwordTextField.text = ""
-            
             showAlert(title: "Invalid Login or Password",
-                      message: "Please, enter correct login and password")
+                      message: "Please, enter correct login and password",
+                      textField: passwordTextField)
         }
     }
-
+    
+    
     @IBAction func forgotButtonPressed(_ sender: UIButton) {
-        switch sender {
-        case forgotUserNameButton:
-            showAlert(title: "Ooops!", message: "Your User name is \(user.login) 😊")
-        default:
-            showAlert(title: "Ooops!", message: "Your password is \(user.password) 😊")
-        }
+        sender.tag == 0
+            ? showAlert(title: "Ooops!", message: "Your User name is \(user.login) 😊")
+            :showAlert(title: "Ooops!", message: "Your password is \(user.password) 😊")
     }
     
     @IBAction func unwind(for seque: UIStoryboardSegue) {
@@ -86,12 +82,14 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    private func showAlert(title: String, message: String) {
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
     }

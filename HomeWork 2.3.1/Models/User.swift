@@ -11,3 +11,17 @@ struct User {
     let person = Person()
 }
 
+struct Person {
+    let fullname = "Алмас Селбаев"
+    let age = 26
+    let height = 182
+    let weight = 63
+    let aboutMe = "Родился в городе Актау, Казахстан. Сейчас проживаю в городе Алматы"
+    let job = Job()
+}
+
+struct Job {
+    let title = "PL/SQL Developer"
+    let workPlace = "First Heartland Jusan Bank"
+    let position =  "Главный эксперт"
+}

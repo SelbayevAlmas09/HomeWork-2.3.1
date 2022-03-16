@@ -12,14 +12,10 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
-    @IBOutlet var backNavigationItem: UINavigationItem!
-    
     var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        backNavigationItem.hidesBackButton = true
         
         welcomeLabel.text = "Welcome, " + userName + "!"
         emojiLabel.text = "👋🏼"
